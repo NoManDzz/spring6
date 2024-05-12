@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- spring配置文件 -->
+
+    <!--
+            配置bean
+            id : 唯一 标识
+            class 类的全路径
+     -->
+    <bean id="userBean" class="com.org.pojo.User"/>
+
+    <!--  -->
+    <bean id="nowTime" class="java.util.Date"/>
+    <!-- dao -->
+    <bean id="userDaoBean" class="com.org.dao.UserDao"/>
+    <!-- service -->
+    <bean id="userServiceBean" class="com.org.service.UserService">
+        <!-- 调用set方法注入 -->
+        <property name="userDao" ref="userDaoBean"/>
+    </bean>
+</beans>
