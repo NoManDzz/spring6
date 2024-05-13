@@ -1,5 +1,6 @@
 package com.org;
 
+import com.org.service.CustomerService;
 import com.org.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -34,4 +35,14 @@ public class TestBean {
         UserService userService = app.getBean("userServiceBean", UserService.class);
         userService.saveUser();
     }
+
+    @Test
+    public void test03() {
+        // 获取spring容器
+        ApplicationContext app = new ClassPathXmlApplicationContext("spring.xml");
+        // 获取对象
+        CustomerService csServiceBean = app.getBean("csServiceBean", CustomerService.class);
+        csServiceBean.save();
+    }
+
 }
