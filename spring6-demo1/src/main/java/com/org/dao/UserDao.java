@@ -8,6 +8,6 @@ public class UserDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserDao.class);
 
     public void insert() {
-        LOGGER.info("数据库正在保持，。");
+        LOGGER.info("user数据库正在保持，。");
     }
 }

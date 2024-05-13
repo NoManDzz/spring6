@@ -22,8 +22,8 @@
         <property name="userDao" ref="userDaoBean"/>
     </bean>
     <bean id="csServiceBean" class="com.org.service.CustomerService">
-        <!-- 构造注入 index 下标 ref 参数类型 -->
-        <constructor-arg index="0" ref="userDaoBean"/>
-        <constructor-arg index="1" ref="vipDaoBean"/>
+        <!-- 构造注入  ref 参数类型 -->
+        <constructor-arg name="userDao" ref="userDaoBean"/>
+        <constructor-arg name="vipDao" ref="vipDaoBean"/>
     </bean>
 </beans>

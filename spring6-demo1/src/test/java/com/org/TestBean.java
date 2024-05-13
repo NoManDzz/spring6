@@ -1,6 +1,7 @@
 package com.org;
 
 import com.org.service.CustomerService;
+import com.org.service.OrderService;
 import com.org.service.UserService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -43,6 +44,15 @@ public class TestBean {
         // 获取对象
         CustomerService csServiceBean = app.getBean("csServiceBean", CustomerService.class);
         csServiceBean.save();
+    }
+
+    @Test
+    public void test04() {
+        // 获取spring容器
+        ApplicationContext app = new ClassPathXmlApplicationContext("set-di.xml");
+        // 获取对象
+        OrderService orderService = app.getBean("orderService2", OrderService.class);
+        orderService.generate();
     }
 
 }

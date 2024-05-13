@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 定义bean -->
+    <bean id="orderDao" class="com.org.dao.OrderDao"/>
+
+    <bean id="orderService" class="com.org.service.OrderService">
+        <!-- 注入外部bean  name是set方法的引用 -->
+        <property name="orderDao" ref="orderDao"/>
+    </bean>
+
+    <bean id="orderService2" class="com.org.service.OrderService">
+        <property name="orderDao">
+            <!-- 内部bean -->
+            <bean class="com.org.dao.OrderDao"/>
+        </property>
+    </bean>
+</beans>

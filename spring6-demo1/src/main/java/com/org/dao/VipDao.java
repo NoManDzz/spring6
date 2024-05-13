@@ -7,6 +7,6 @@ public class VipDao {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserDao.class);
 
     public void insert() {
-        LOGGER.info("数据库正在保持，。");
+        LOGGER.info("vip数据库正在保持，。");
     }
 }
