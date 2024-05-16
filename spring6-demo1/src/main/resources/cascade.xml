@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.org.pojo.User">
+        <!-- 不注入属性 默认为null -->
+        <!-- <property name="name" value="jor"/>-->
+        <!-- 手动注入null -->
+        <!--<property name="name">
+            <null/>
+        </property>-->
+        <!-- 空字符串 -->
+        <property name="name" value=""/>
+        <property name="password" value="111"/>
+        <property name="id" value="1"/>
+        <!-- 简单类型数组 -->
+        <property name="hobby">
+            <array>
+                <value>dance</value>
+                <value>singing</value>
+            </array>
+        </property>
+        <!-- 引用数组 -->
+        <property name="people">
+            <array>
+                <ref bean="person1"/>
+                <ref bean="person2"/>
+            </array>
+        </property>
+        <!-- list -->
+        <property name="names">
+            <list>
+                <value>joeeer</value>
+                <value>bko</value>
+            </list>
+        </property>
+        <!-- set -->
+        <property name="address">
+            <set>
+                <value>dad</value>
+                <value>grandmother</value>
+            </set>
+        </property>
+        <!-- map -->
+        <property name="phones">
+            <map>
+                <entry key="1" value="119"/>
+                <entry key="2" value="110"/>
+            </map>
+        </property>
+        <!-- properties key value 都是String -->
+        <property name="properties">
+            <props>
+                <prop key="name">anli</prop>
+                <prop key="adress">cn</prop>
+            </props>
+        </property>
+        <!-- 级联赋值 需要get方法 -->
+        <property name="userClass" ref="userClass"/>
+        <property name="userClass.name" value="1班"/>
+
+    </bean>
+
+    <bean id="person1" class="com.org.pojo.Person">
+        <property name="name" value="jor"/>
+    </bean>
+    <bean id="person2" class="com.org.pojo.Person">
+        <property name="name" value="niko"/>
+    </bean>
+
+
+    <bean id="userClass" class="com.org.pojo.UserClass">
+
+    </bean>
+    <!-- <bean id="userClass" class="com.org.pojo.UserClass">
+         <property name="name" value="1班"/>
+     </bean>-->
+
+</beans>

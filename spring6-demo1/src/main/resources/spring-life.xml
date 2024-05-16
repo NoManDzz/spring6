@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cat" class="com.org.pojo.Cat" init-method="initCat" destroy-method="destroyCat">
+        <property name="name" value="cat"/>
+    </bean>
+    <!-- 配置bean后处理器 对当前整个配置的bean都有作用-->
+    <bean class="com.org.pojo.BeanPost"/>
+</beans>

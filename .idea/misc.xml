@@ -6,6 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spring6-demo1/pom.xml" />
+        <option value="$PROJECT_DIR$/simple-factory/pom.xml" />
+        <option value="$PROJECT_DIR$/factory-method/pom.xml" />
+        <option value="$PROJECT_DIR$/reflect/pom.xml" />
+        <option value="$PROJECT_DIR$/my_spring/pom.xml" />
+        <option value="$PROJECT_DIR$/spring6-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-demo2/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/static-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aspectj/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-project1/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-bank/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 简单工厂bean实例化 -->
+    <bean id="star" class="com.org.factory.StarFactory" factory-method="get"/>
+
+    <!-- 工程方法模式 -->
+    <bean id="gunFactory" class="com.org.factory.GunFactory"/>
+    <bean id="gun" factory-bean="gunFactory" factory-method="get"/>
+
+    <!-- FactoryBeam 接口 -->
+    <bean id="woman" class="com.org.factory.WomanFactory"/>
+
+    <bean id="dateFactory" class="com.org.factory.DateFactory">
+        <constructor-arg index="0" value="2002-12-12"/>
+    </bean>
+
+    <bean id="student" class="com.org.pojo.Student">
+        <property ref="dateFactory" name="date"/>
+    </bean>
+
+</beans>

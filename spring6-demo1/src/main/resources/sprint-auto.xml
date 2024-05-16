@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 根据名称自动装配 根据set方法注入 -->
+    <bean id="orderService" class="com.org.service.OrderService" autowire="byName"/>
+    <!-- setOrderDao -->
+    <bean id="orderDao" class="com.org.dao.OrderDao"/>
+
+    <!-- 根据类型进行自动配置 根据set方法注入 -->
+    <bean class="com.org.dao.VipDao"/>
+    <bean class="com.org.dao.UserDao"/>
+    <bean id="csService" class="com.org.service.CustomerService" autowire="byType">
+
+    </bean>
+</beans>

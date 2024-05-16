@@ -2,6 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 注入简单类型 -->
+    <bean id="user" class="com.org.pojo.User">
+        <!-- value -->
+        <property name="id" value="20"/>
+        <property name="name" value="jor"/>
+        <property name="password" value="123"/>
+    </bean>
     <!-- 定义bean -->
     <bean id="orderDao" class="com.org.dao.OrderDao"/>
 
